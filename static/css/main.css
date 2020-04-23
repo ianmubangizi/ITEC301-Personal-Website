@@ -80,3 +80,27 @@ footer {
     height: 3px;
     background-color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    #nav {
+        left: 0;
+        width: 100%;
+        display: none;
+        margin-top: 8.5rem;
+        position: absolute;
+        background-color: rgb(60, 70, 180);
+    }
+
+    header .nav-menu {
+        padding: 0px 0px 0px 20px;
+        flex-direction: column;
+    }
+
+    .nav-menu .nav-item {
+        padding: 0.625rem;
+    }
+
+    header .burger-bar {
+        display: flex;
+    }
+}
