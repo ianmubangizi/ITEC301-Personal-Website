@@ -12,3 +12,71 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+header h1 {
+    flex: 1.5;
+    font-size: 1.8rem;
+}
+
+header {
+    display: flex;
+    color: azure;
+    padding: 0 30px;
+    align-items: center;
+    border-bottom: 1px solid rgba(25, 35, 45, 0.5);
+    background: rgba(0, 115, 215, 0.835);
+    background: linear-gradient(to right, rgb(35, 145, 180), rgb(25, 125, 215));
+}
+
+footer {
+    color: azure;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+    justify-self: flex-end;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.active {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu a {
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.nav-menu a:hover {
+    color: rgb(189, 189, 189);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+
+.nav-menu .nav-item {
+    padding: 0 10px 0 10px;
+}
+
+.burger-bar {
+    display: none;
+    flex-direction: column;
+}
+
+.burger-bar span {
+    width: 1.8rem;
+    margin: 3px;
+    height: 3px;
+    background-color: white;
+}
