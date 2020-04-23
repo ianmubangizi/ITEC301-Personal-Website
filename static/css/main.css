@@ -84,6 +84,21 @@ footer {
     display: flex !important;
 }
 
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .hero {
+    height: 40vh;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    background-image: linear-gradient(rgba(60, 80, 200, 0.45),
+            rgba(80, 160, 180, 0.35));
+}
+
 @media only screen and (max-width: 768px) {
     #nav {
         left: 0;
