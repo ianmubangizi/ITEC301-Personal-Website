@@ -23,9 +23,9 @@ header {
     color: azure;
     padding: 0 30px;
     align-items: center;
-    border-bottom: 1px solid rgba(25, 35, 45, 0.5);
-    background: rgba(0, 115, 215, 0.835);
-    background: linear-gradient(to right, rgb(35, 145, 180), rgb(25, 125, 215));
+    border-bottom: 1px solid rgba(20, 40, 60, 0.25);
+    background: rgba(10, 130, 220, 0.835);
+    background: linear-gradient(to left, rgb(20, 150, 180), rgb(10, 120, 230));
 }
 
 footer {
@@ -60,10 +60,9 @@ footer {
 }
 
 .nav-menu a:hover {
-    color: rgb(189, 189, 189);
+    color: rgb(180, 180, 180);
     border-bottom: 1px solid rgb(255, 255, 255);
 }
-
 
 .nav-menu .nav-item {
     padding: 0 10px 0 10px;
@@ -81,6 +80,10 @@ footer {
     background-color: white;
 }
 
+.display-flex {
+    display: flex !important;
+}
+
 @media only screen and (max-width: 768px) {
     #nav {
         left: 0;
@@ -88,7 +91,7 @@ footer {
         display: none;
         margin-top: 8.5rem;
         position: absolute;
-        background-color: rgb(60, 70, 180);
+        background: linear-gradient(to top left,  rgba(30, 40, 50, 0.85), rgb(30, 60, 100))
     }
 
     header .nav-menu {
