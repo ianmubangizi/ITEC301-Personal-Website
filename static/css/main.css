@@ -90,9 +90,20 @@ footer {
     flex-direction: column;
 }
 
+.hero h1 {
+    color: azure;
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+.profile {
+    width: 130px;
+    border-radius: 100px;
+}
+
 .content .hero {
-    height: 40vh;
-    padding: 10px;
+    min-height: 20vh;
+    padding: 20px;
     margin-bottom: 20px;
     align-items: center;
     background-size: cover;
