@@ -8,20 +8,27 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+  }
 
 header h1 {
     flex: 1.5;
     font-size: 1.8rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     color: azure;
     padding: 0 30px;
+    max-height: 70px;
     align-items: center;
     border-bottom: 1px solid rgba(20, 40, 60, 0.25);
     background: rgba(10, 130, 220, 0.835);
@@ -32,8 +39,8 @@ footer {
     color: azure;
     padding: 10px;
     margin-top: 30px;
+    max-height: 80px;
     text-align: center;
-    justify-self: flex-end;
     background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -90,6 +97,17 @@ footer {
     flex-direction: column;
 }
 
+.hero {
+    max-height: 40vh;
+    padding: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to bottom right, rgba(100, 160, 200, 0.65), rgba(150, 185, 230, 0.385)), url("../img/hero-backgroud.jpg");
+}
+
+
 .hero h1 {
     color: azure;
     font-weight: 400;
@@ -101,14 +119,43 @@ footer {
     border-radius: 100px;
 }
 
-.content .hero {
-    min-height: 20vh;
-    padding: 20px;
-    margin-bottom: 20px;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-image: linear-gradient(to bottom right, rgba(100, 160, 200, 0.65), rgba(150, 185, 230, 0.385)), url("../img/hero-backgroud.jpg");
+.projects {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 20px 10% 20px 10%;
+    grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.project {
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid rgb(185, 185, 185);
+    box-shadow: -5px 5px 10px 0px rgba(85, 95, 100, 0.45);
+}
+
+.project:hover {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(185, 185, 185);
+    box-shadow: 0px 0px 20px 5px rgba(85, 95, 100, 0.45);
+}
+
+.project-image {
+    max-width: 279px;
+    border-radius: 5px;
+}
+
+.logo-icon {
+    width: 25px;
+    border: 1px dashed rgb(145, 145, 200);
+    align-content: center;
+    border-radius: 5px;
+}
+
+.logo-icon:hover {
+    border: 1px dashed rgb(35, 195, 255);
 }
 
 @media only screen and (max-width: 768px) {
@@ -116,7 +163,7 @@ footer {
         left: 0;
         width: 100%;
         display: none;
-        margin-top: 8.5rem;
+        margin-top: 8.4rem;
         position: absolute;
         background: linear-gradient(to top left, rgb(80, 130, 180), rgb(60, 90, 160))
     }
