@@ -136,9 +136,6 @@ footer {
 }
 
 .project:hover {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(185, 185, 185);
     box-shadow: 0px 0px 20px 5px rgba(85, 95, 100, 0.45);
 }
 
@@ -153,12 +150,32 @@ footer {
     min-height: 30px;
     border-radius: 5px;
     border: 1px dashed rgb(145, 145, 200);
-    align-content: center;
-    border-radius: 5px;
 }
 
 .logo-icon:hover {
     border: 1px dashed rgb(35, 195, 255);
+}
+
+.project>h1,
+h2,
+h3,
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.about {
+    padding-top: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+@media only screen and (max-width: 430px) {
+    .about {
+        padding-top: 5%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
