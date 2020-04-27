@@ -184,3 +184,24 @@ footer {
         display: flex;
     }
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(100, 110, 160, 0.15);
+}
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(50, 80, 160, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100, 110, 160, 0.6);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(50, 80, 160, 0.60);
+}
