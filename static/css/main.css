@@ -10,10 +10,10 @@ body {
     height: 100%;
     display: grid;
     grid-template-areas:
-      'header'
-      'main'
-      'footer';
-  }
+        'header'
+        'main'
+        'footer';
+}
 
 header h1 {
     flex: 1.5;
@@ -148,7 +148,10 @@ footer {
 }
 
 .logo-icon {
-    width: 25px;
+    padding: 2px;
+    max-width: 30px;
+    min-height: 30px;
+    border-radius: 5px;
     border: 1px dashed rgb(145, 145, 200);
     align-content: center;
     border-radius: 5px;
