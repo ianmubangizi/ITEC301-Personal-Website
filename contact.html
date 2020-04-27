@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ian Mubangizi - Contact</title>
     <link rel="stylesheet" href="./static/css/main.css">
 </head>
+
 <body>
     <header>
         <h1>Contact Page</h1>
@@ -24,8 +26,37 @@
         </div>
     </header>
     <main class="content">
-        <section>
-            <h1>Contact Me</h1>
+        <section class="contact">
+            <h1 class="center-text">Contact Me</h1>
+            <form class="flex-column">
+                <input-group>
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text" name="name">
+                </input-group>
+                <input-group>
+                    <label for="email">Email Address</label>
+                    <input id="email" type="text" name="email">
+                </input-group>
+                <input-group>
+                    <label for="phone">Mobile Number</label>
+                    <input id="phone" type="text" name="phone">
+                </input-group>
+                <input-group>
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option selected disabled hidden>Select</option>
+                        <option value="za">South Africa</option>
+                        <option value="au">Australia</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                    </select>
+                </input-group>
+                <input-group>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="contact-message" cols="30" rows="10"></textarea>
+                </input-group>
+                <input id="submit-button" type="button" value="Submit">
+            </form>
         </section>
     </main>
     <footer>
@@ -35,4 +66,5 @@
     </footer>
     <script type="text/javascript" src="./static/js/main.js"></script>
 </body>
+
 </html>

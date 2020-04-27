@@ -91,6 +91,16 @@ footer {
     display: flex !important;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .content {
     height: 100%;
     display: flex;
@@ -174,12 +184,52 @@ p {
     text-align: center;
 }
 
+.contact {
+    margin: auto;
+    padding: 30px;
+    min-width: 40vw;
+    max-width: 80vw;
+}
+
+#contact-message {
+    min-width: 40vw;
+    max-width: 80vw;
+    min-height: 200px;
+}
+
+#submit-button {
+    color: azure;
+    height: 40px;
+    margin: 30px 5px 0px 5px;
+    border: 1px solid rgba(10, 129, 220, 0.425);
+    background-color: rgba(10, 130, 220, 0.835);
+}
+
+input-group {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+input-group label {
+    margin-bottom: 5px;
+}
+
+input-group input, select {
+    min-height: 30px;
+}
+
 @media only screen and (max-width: 430px) {
     .about {
         padding-top: 5%;
         padding-left: 8%;
         padding-right: 8%;
     }
+
+    .contact {
+        min-width: 60vw;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -190,6 +240,10 @@ p {
         margin-top: 8.4rem;
         position: absolute;
         background: linear-gradient(to top left, rgb(80, 130, 180), rgb(60, 90, 160))
+    }
+
+    .contact {
+        min-width: 80vw;
     }
 
     header .nav-menu {
