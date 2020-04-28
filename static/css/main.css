@@ -156,6 +156,7 @@ footer {
 .checkmark-image,
 .project-image {
     margin: auto;
+    min-height: 180;
     max-width: 280px;
     border-radius: 5px;
 }
