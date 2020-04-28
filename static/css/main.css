@@ -216,6 +216,10 @@ p {
     padding: 10%;
 }
 
+.border-red {
+    border: 1px solid rgb(218, 109, 109);
+}
+
 input-group {
     margin: 5px;
     display: flex;

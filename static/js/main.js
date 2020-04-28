@@ -1,6 +1,12 @@
 var form = new Map()
 var nav = document.getElementById("nav")
 var onmin = matchMedia("(min-width: 768px)")
+var countries = {
+    "za": "South Africa",
+    "au": "Australia",
+    "usa": "United States",
+    "uk": "United Kingdom"
+}
 
 function toggleMenu() {
     nav.classList.toggle("display-flex")
@@ -24,9 +30,13 @@ function submitMessage() {
         if (obj.value == "") {
             obj.error = "The " + key + " field can not be empty"
             insertFormError(obj.error, key)
+            errors++
         } else {
             ifVaild(obj.value, key, (match, error) => {
-                if (!match) insertFormError(error, key)
+                if (!match) {
+                    errors++
+                    insertFormError(error, key)
+                }
             })
         }
         obj.error != "" ? errors++ : {}
@@ -35,6 +45,7 @@ function submitMessage() {
     if (errors == 0) {
         document.getElementById("contact-form").classList.add("display-none")
         document.getElementById("submitted").classList.replace("display-none", "display-flex")
+        alertFormValues()
     }
 }
 
@@ -55,16 +66,31 @@ function ifVaild(value, key, cb) {
 }
 
 function insertFormError(error, key) {
+    let field = form.get(key).element
     let tag = document.createElement("p")
     let group = document.getElementById(key + "-group")
     tag.innerHTML = `<p id="${key}-error" style="font-size: 12px; color:red;">${error}</p>`
+    field.classList.add("border-red")
     group.appendChild(tag)
-    setTimeout(() => group.removeChild(tag), 3500)
+    setTimeout(() => {
+        group.removeChild(tag)
+        field.classList.remove("border-red")
+    }, 3000)
 }
 
 function formObject(element) {
     return {
         error: "",
-        value: element.value
+        value: element.value,
+        element: element
     }
+}
+
+function alertFormValues() {
+    alert(`
+        Hi, ${form.get("name").value} from ${countries[form.get("country").value]}
+        Email: ${form.get("email").value} 
+        Phone: ${form.get("phone").value}
+        You Sent Me: ${form.get("message").value}
+    `)
 }
