@@ -26,37 +26,41 @@
         </div>
     </header>
     <main class="content">
-        <section class="contact">
+        <section id="contact-form" class="contact">
             <h1 class="center-text">Contact Me</h1>
             <form class="flex-column">
-                <input-group>
+                <input-group id="name-group">
                     <label for="name">Full Name</label>
-                    <input id="name" type="text" name="name">
+                    <input id="fullname" type="text" name="name">
                 </input-group>
-                <input-group>
+                <input-group id="email-group">
                     <label for="email">Email Address</label>
                     <input id="email" type="text" name="email">
                 </input-group>
-                <input-group>
+                <input-group id="phone-group">
                     <label for="phone">Mobile Number</label>
                     <input id="phone" type="text" name="phone">
                 </input-group>
-                <input-group>
+                <input-group id="country-group">
                     <label for="country">Country</label>
                     <select id="country" name="country">
-                        <option selected disabled hidden>Select</option>
+                        <option value="" selected disabled hidden>Select</option>
                         <option value="za">South Africa</option>
                         <option value="au">Australia</option>
                         <option value="usa">United States</option>
                         <option value="uk">United Kingdom</option>
                     </select>
                 </input-group>
-                <input-group>
+                <input-group id="message-group">
                     <label for="message">Message</label>
                     <textarea name="message" id="contact-message" cols="30" rows="10"></textarea>
                 </input-group>
-                <input id="submit-button" type="button" value="Submit">
+                <input id="submit-button" type="button" value="Submit" onclick="submitMessage()">
             </form>
+        </section>
+        <section id="submitted" class="display-none">
+            <img class="checkmark-image" src="./static/img/checkmark (1).png" alt="Green Checkmark">
+            <message></message>
         </section>
     </main>
     <footer>
