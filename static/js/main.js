@@ -32,7 +32,6 @@ function submitMessage() {
         } else {
             ifVaild(obj.value, key, (match, error) => {
                 if (!match) {
-                    errors++
                     insertFormError(error, key)
                 }
             })
@@ -64,15 +63,16 @@ function ifVaild(value, key, cb) {
 }
 
 function insertFormError(error, key) {
-    let field = form.get(key).element
+    let field = form.get(key)
     let tag = document.createElement("p")
     let group = document.getElementById(key + "-group")
     tag.innerHTML = `<p id="${key}-error" style="font-size: 12px; color:red;">${error}</p>`
-    field.classList.add("border-red")
+    field.error = error
     group.appendChild(tag)
+    field.element.classList.add("border-red")
     setTimeout(() => {
         group.removeChild(tag)
-        field.classList.remove("border-red")
+        field.element.classList.remove("border-red")
     }, 3000)
 }
 
