@@ -28,9 +28,7 @@ function submitMessage() {
     var errors = 0
     form.forEach((obj, key) => {
         if (obj.value == "") {
-            obj.error = "The " + key + " field can not be empty"
-            insertFormError(obj.error, key)
-            errors++
+            insertFormError(`The ${key} field can not be empty`, key)
         } else {
             ifVaild(obj.value, key, (match, error) => {
                 if (!match) {
