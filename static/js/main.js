@@ -19,13 +19,9 @@ onmin.addListener((mq) => {
 })
 
 function submitMessage() {
-    form.set("name", formObject(document.getElementById("fullname")))
-    form.set("phone", formObject(document.getElementById("phone")))
-    form.set("email", formObject(document.getElementById("email")))
-    form.set("country", formObject(document.getElementById("country")))
-    form.set("message", formObject(document.getElementById("contact-message")))
-
     var errors = 0
+    getFormValues()
+
     form.forEach((obj, key) => {
         if (obj.value == "") {
             insertFormError(`The ${key} field can not be empty`, key)
@@ -44,6 +40,14 @@ function submitMessage() {
         document.getElementById("submitted").classList.replace("display-none", "display-flex")
         alertFormValues()
     }
+}
+
+function getFormValues() {
+    form.set("name", formObject(document.getElementById("fullname")))
+    form.set("phone", formObject(document.getElementById("phone")))
+    form.set("email", formObject(document.getElementById("email")))
+    form.set("country", formObject(document.getElementById("country")))
+    form.set("message", formObject(document.getElementById("contact-message")))
 }
 
 function ifVaild(value, key, cb) {
