@@ -91,6 +91,10 @@ footer {
     display: flex !important;
 }
 
+.display-none {
+    display: none !important;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -149,8 +153,10 @@ footer {
     box-shadow: 0px 0px 20px 5px rgba(85, 95, 100, 0.45);
 }
 
+.checkmark-image,
 .project-image {
-    max-width: 279px;
+    margin: auto;
+    max-width: 280px;
     border-radius: 5px;
 }
 
@@ -205,6 +211,11 @@ p {
     background-color: rgba(10, 130, 220, 0.835);
 }
 
+#submitted {
+    margin: auto;
+    padding: 10%;
+}
+
 input-group {
     margin: 5px;
     display: flex;
@@ -215,7 +226,8 @@ input-group label {
     margin-bottom: 5px;
 }
 
-input-group input, select {
+input-group input,
+select {
     min-height: 30px;
 }
 
@@ -229,7 +241,7 @@ input-group input, select {
     .contact {
         min-width: 60vw;
     }
-    
+
 }
 
 @media only screen and (max-width: 768px) {
